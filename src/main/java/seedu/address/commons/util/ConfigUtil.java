@@ -6,7 +6,10 @@ import java.util.Optional;
 
 import seedu.address.commons.core.Config;
 import seedu.address.commons.exceptions.DataConversionException;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 52fbdfc06ee9ab3e0375ff7f1029954b8880ca8e
 /**
  * A class for accessing the Config File.
  */

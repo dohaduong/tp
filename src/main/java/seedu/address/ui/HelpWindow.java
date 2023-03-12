@@ -10,6 +10,11 @@ import javafx.scene.input.ClipboardContent;
 import javafx.stage.Stage;
 import seedu.address.commons.core.LogsCenter;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 52fbdfc06ee9ab3e0375ff7f1029954b8880ca8e
 /**
  * Controller for a help page
  */

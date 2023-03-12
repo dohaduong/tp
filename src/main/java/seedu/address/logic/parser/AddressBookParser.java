@@ -7,14 +7,26 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import seedu.address.logic.commands.AddCommand;
+<<<<<<< HEAD
 import seedu.address.logic.commands.ClearCommand;
 import seedu.address.logic.commands.Command;
 import seedu.address.logic.commands.DeleteCommand;
+=======
+import seedu.address.logic.commands.AddReminder;
+import seedu.address.logic.commands.ClearCommand;
+import seedu.address.logic.commands.Command;
+import seedu.address.logic.commands.DeleteCommand;
+import seedu.address.logic.commands.DeleteReminder;
+>>>>>>> 52fbdfc06ee9ab3e0375ff7f1029954b8880ca8e
 import seedu.address.logic.commands.EditCommand;
 import seedu.address.logic.commands.ExitCommand;
 import seedu.address.logic.commands.FindCommand;
 import seedu.address.logic.commands.HelpCommand;
 import seedu.address.logic.commands.ListCommand;
+<<<<<<< HEAD
+=======
+import seedu.address.logic.commands.ListReminder;
+>>>>>>> 52fbdfc06ee9ab3e0375ff7f1029954b8880ca8e
 import seedu.address.logic.parser.exceptions.ParseException;
 
 /**
