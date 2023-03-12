@@ -4,7 +4,10 @@ import static java.util.Objects.requireNonNull;
 
 import javafx.scene.image.Image;
 import seedu.address.MainApp;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 52fbdfc06ee9ab3e0375ff7f1029954b8880ca8e
 /**
  * A container for App specific utility functions
  */
