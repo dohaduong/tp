@@ -2,16 +2,7 @@ package seedu.address.ui;
 
 import java.util.logging.Logger;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TextInputControl;
-import javafx.scene.input.Clipboard;
-import javafx.scene.input.ClipboardContent;
-import javafx.scene.input.KeyCombination;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import seedu.address.commons.core.GuiSettings;
@@ -102,9 +93,6 @@ public class TimetableWindow extends UiPart<Stage> {
         getRoot().requestFocus();
     }
 
-//    public jobListPanel getJobListPanel() {
-//        return jobListPanel;
-//    }
     /**
      * Fills up all the placeholders of this window.
      */
