@@ -121,6 +121,7 @@ public interface Model {
     Map<LocalDate, ArrayList<ArrayList<DeliveryJob>>> getSortedDeliveryJobListByDate();
     Map<LocalDate, ArrayList<ArrayList<DeliveryJob>>> getWeekDeliveryJobList();
     ArrayList<ArrayList<DeliveryJob>> getDayOfWeekJob(int dayOfWeek);
+    LocalDate getFocusDate();
 
 
 
@@ -142,4 +143,8 @@ public interface Model {
      * Returns an unmodifiable view of the filtered person list
      */
     ObservableList<Reminder> getReminderList();
+
+    /**
+     * Returns user input date
+     */
 }

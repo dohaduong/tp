@@ -231,8 +231,8 @@ public class ModelManager implements Model {
 
         for (int i = 0; i < sortedDeliveryJobs.size(); i++) {
             LocalDate jobDate = sortedDeliveryJobs.get(i).getDeliverDate();
-            String jobSlot = sortedDeliveryJobs.get(i).getDeliverSlot();
-            int slotIndex = Integer.parseInt(jobSlot) - 1;
+            int jobSlot = sortedDeliveryJobs.get(i).getDeliverSlot();
+            int slotIndex = (jobSlot) - 1;
             DeliveryJob toAdd = sortedDeliveryJobs.get(i);
             if (jobListGroupedByDate.containsKey(jobDate)) {
                 ArrayList<ArrayList<DeliveryJob>> jobsInCurrentSlot = jobListGroupedByDate.get(jobDate);
@@ -303,6 +303,12 @@ public class ModelManager implements Model {
         LocalDate dayToAdd = focusDate.plusDays(dayOfWeek - focusDayOfWeek);
         return weekJobListGroupedByDate.get(dayToAdd);
     }
+
+    @Override
+    public LocalDate getFocusDate(){
+        return focusDate;
+    }
+
 
     //=========== ReminderList Accessors =============================================================
 

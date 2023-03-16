@@ -14,7 +14,8 @@ public class DeliveryJob {
 
     // Delivery informations
     private final Person recepient;
-    private final String deliverSlot; // TODO: Update data type when confirmed
+    private final LocalDate deliverDate;
+    private final int deliverSlot; // TODO: Update data type when confirmed
     private final Earning earning;
     private final boolean isDelivered;
 
@@ -23,11 +24,11 @@ public class DeliveryJob {
      *
      * @param recepient
      * @param deliverSlot
-     * @param packages
+     * @param deliverDate
      * @param earning
      */
-    public DeliveryJob(Person recepient, String deliverSlot, String earning) {
-        this(UUID.randomUUID().toString(), recepient, deliverSlot, earning, false);
+    public DeliveryJob(Person recepient, String deliverDate, String deliverSlot, String earning) {
+        this(UUID.randomUUID().toString(), recepient, deliverDate, deliverSlot, earning, false);
     }
 
     /**
@@ -36,13 +37,14 @@ public class DeliveryJob {
      * @param jobId
      * @param recepient
      * @param deliverSlot
-     * @param packages
+     * @param deliverDate
      * @param earning
      */
-    public DeliveryJob(String jobId, Person recepient, String deliverSlot, String earning, boolean isDelivered) {
+    public DeliveryJob(String jobId, Person recepient, String deliverDate, String deliverSlot, String earning, boolean isDelivered) {
         this.jobId = jobId;
         this.recepient = recepient;
-        this.deliverSlot = deliverSlot;
+        this.deliverDate = LocalDate.parse(deliverDate);
+        this.deliverSlot = Integer.parseInt(deliverSlot);
         this.earning = new Earning(earning);
         this.isDelivered = isDelivered;
     }
@@ -55,7 +57,7 @@ public class DeliveryJob {
         return recepient;
     }
 
-    public String getDeliverSlot() {
+    public int getDeliverSlot() {
         return deliverSlot;
     }
 
@@ -91,6 +93,7 @@ public class DeliveryJob {
 
         String outString = "Job [%s]\n"
                 + "receipent: %s\n"
+                + "date: %s\n"
                 + "slot: %s\n"
                 + "earn: $%s\n"
                 + "status: $%s\n";
